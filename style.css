@@ -1,7 +1,13 @@
-* {
-    background-color: black;
-    color: azure;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+body {
+    background-color: rgba(47, 45, 45, 2); /* Cor de fundo com opacidade */
+    background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: 'Caveat', cursive;
+    font-size: 6rem;
     text-align: center;
-    margin-top: 10%;
-    font-size: 2rem;
+    color: #2BDEFD;
 }

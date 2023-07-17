@@ -7,7 +7,41 @@ body {
     background-size: cover;
     background-blend-mode: multiply;
     font-family: 'Caveat', cursive;
-    font-size: 6rem;
+    text-align: center;
+    font-size: 4rem;
     text-align: center;
     color: #2BDEFD;
+}
+ 
+p {
+    font-size: 3rem;
+}
+
+.chute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input {
+    margin-top: 1rem;
+    width: 8rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 4rem;
+}
+
+button {
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #2BDEFD;
+    margin-top: 2rem;
+    font-family: 'Caveat', cursive;
+    border-radius: 10%;
+    cursor: pointer;
 }

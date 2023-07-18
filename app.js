@@ -1,6 +1,7 @@
 iniciarJogo()
 let numeroSecreto = gerarNumeroAleatorio()
 let tentativas = 1
+let numerosJaEscolhidos = []
 
 function exibirTextoNaTela(tag, textoParaExibir) {
     let campo = document.querySelector(tag);
@@ -34,8 +35,9 @@ function verificarChute() {
 
 function reinicarJogo() {
     iniciarJogo()
-    numeroSecreto = gerarNumeroAleatorio
+    numeroSecreto = gerarNumeroAleatorio()
     tentativas = 1
+    limparInput()
 }
 
 function limparInput() {
@@ -44,5 +46,5 @@ function limparInput() {
 }
 
 function gerarNumeroAleatorio() {
-   return parseInt(Math.random() * 10) + 1
+    return parseInt(Math.random() * 10) + 1
 }

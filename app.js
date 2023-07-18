@@ -48,7 +48,7 @@ function limparInput() {
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * numeroLimiteParaSorteio) + 1
-    if (numerosJaEscolhidos.includes(numeroEscolhido) || numerosJaEscolhidos.length > numeroLimiteParaSorteio) {
+    if (numerosJaEscolhidos.includes(numeroEscolhido) || numerosJaEscolhidos.length > numeroLimiteParaSorteio - 1) {
         numerosJaEscolhidos = []
         return gerarNumeroAleatorio()
     } else {
@@ -56,3 +56,10 @@ function gerarNumeroAleatorio() {
         return numeroEscolhido
     }
 }
+
+// function gerarNumeroAleatorio() {
+//     let numeroEscolhido = parseInt(Math.random() * numeroLimiteParaSorteio) + 1;
+//     return (numerosJaEscolhidos.includes(numeroEscolhido) || numerosJaEscolhidos.length > numeroLimiteParaSorteio - 1)
+//         ? (numerosJaEscolhidos = [], gerarNumeroAleatorio())
+//         : (numerosJaEscolhidos.push(numeroEscolhido), numeroEscolhido);
+// }

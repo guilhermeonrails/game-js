@@ -1,8 +1,7 @@
 iniciarJogo()
-let listaDeNumerosJaSorteados = []
+let numerosJaEscolhidos = []
 let numeroSecreto = gerarNumeroAleatorio()
 let tentativas = 1
-
 
 function exibirTextoNaTela(tag, textoParaExibir) {
     let campo = document.querySelector(tag);
@@ -47,12 +46,12 @@ function limparInput() {
 }
 
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 2) + 1
-    if (listaDeNumerosJaSorteados.includes(numeroEscolhido)) {
-        return gerarNumeroAleatorio()
-    } else {
-        listaDeNumerosJaSorteados.push(numeroEscolhido)
-        console.log(listaDeNumerosJaSorteados)
-        return numeroEscolhido
-    }
+    return parseInt(Math.random() * 10) + 1
 }
+
+// function gerarNumeroAleatorio() {
+//     let numeroEscolhido = parseInt(Math.random() * numeroLimiteParaSorteio) + 1;
+//     return (numerosJaEscolhidos.includes(numeroEscolhido) || numerosJaEscolhidos.length > numeroLimiteParaSorteio - 1)
+//         ? (numerosJaEscolhidos = [], gerarNumeroAleatorio())
+//         : (numerosJaEscolhidos.push(numeroEscolhido), numeroEscolhido);
+// }

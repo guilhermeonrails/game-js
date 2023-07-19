@@ -1,12 +1,13 @@
 iniciarJogo()
+let listaDeNumerosJaSorteados = []
 let numeroSecreto = gerarNumeroAleatorio()
 let tentativas = 1
-let numerosJaEscolhidos = []
+
 
 function exibirTextoNaTela(tag, textoParaExibir) {
     let campo = document.querySelector(tag);
     campo.innerHTML = textoParaExibir;
-    responsiveVoice.speak(textoParaExibir, 'Brazilian Portuguese Female', { rate: 1.2 });
+    // responsiveVoice.speak(textoParaExibir, 'Brazilian Portuguese Female', { rate: 1.2 });
 }
 
 function iniciarJogo() {
@@ -46,5 +47,12 @@ function limparInput() {
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10) + 1
+    let numeroEscolhido = parseInt(Math.random() * 2) + 1
+    if (listaDeNumerosJaSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio()
+    } else {
+        listaDeNumerosJaSorteados.push(numeroEscolhido)
+        console.log(listaDeNumerosJaSorteados)
+        return numeroEscolhido
+    }
 }

@@ -12,7 +12,7 @@ function exibirTextoNaTela(tag, textoParaExibir) {
 }
 
 function iniciarJogo() {
-    exibirTextoNaTela("h1", "Jogo do número secreto") 
+    exibirTextoNaTela("h1", `Adivinhe o <span class="container__texto-azul">número secreto</span>`)
     exibirTextoNaTela("p", "Escolha um número entre 1 e 10")
 }
 
@@ -20,11 +20,11 @@ function verificarChute() {
     let chute = document.querySelector("input").value
 
     if (chute == numeroSecreto) {
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa' 
+        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
         let mensagem = `O número secreto era ${numeroSecreto} e você acertou com apenas ${tentativas} ${palavraTentativa} 😎`
         exibirTextoNaTela("p", mensagem)
     } else if (chute > numeroSecreto) {
-        mensagem =  `O número secreto é menor que ${chute}`
+        mensagem = `O número secreto é menor que ${chute}`
         exibirTextoNaTela("p", mensagem)
         limparInput()
     } else {
@@ -66,5 +66,5 @@ function gerarNumeroAleatorio() {
     } else {
         listaDeNumerosJaSorteados.push(numeroEscolhido)
         return numeroEscolhido
-    }  
+    }
 }
